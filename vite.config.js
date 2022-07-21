@@ -12,7 +12,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/lib/index.ts'),
+      entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'PowerWsSdk',
       formats: ['es', 'umd'],
       fileName: (format) => `powerws-sdk.${format}.js`,
