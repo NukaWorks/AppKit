@@ -1,0 +1,57 @@
+.fullSize {
+  width: 100%;
+  height: 100vh;
+}
+
+.default-bgcolor {
+  background-color: #203a41;
+}
+
+.smooth-image-wrapper {
+  @extend .default-bgcolor;
+  position: relative;
+
+  .smooth-image {
+    transition: opacity 1s;
+    @extend .default-bgcolor;
+  }
+
+  .smooth-no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend .default-bgcolor;
+    text-transform: capitalize;
+  }
+
+  .img-visible {
+    opacity: 1;
+  }
+
+  .img-hidden {
+    opacity: 0;
+  }
+
+  @keyframes load-anim {
+    0% {
+      @extend .default-bgcolor;
+    }
+
+    50% {
+      background-color: #1c3036;
+    }
+
+    100% {
+      @extend .default-bgcolor;
+    }
+  }
+
+  .smooth-preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @extend .fullSize;
+    @extend .default-bgcolor;
+    animation: load-anim 2s ease-in-out 0s infinite reverse forwards;
+  }
+}
