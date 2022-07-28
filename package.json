@@ -1,5 +1,5 @@
 {
-  "name": "@powerws/sdk",
+  "name": "@powerws/corekit",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
